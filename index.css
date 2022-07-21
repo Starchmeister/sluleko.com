@@ -211,6 +211,7 @@ body {
   margin-left: -191px;
 }
 .rectangle-icon1 {
+  display: none;
   position: absolute;
   margin: 0 !important;
   top: 0;
