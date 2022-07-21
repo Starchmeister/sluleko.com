@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title></title>
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="./index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+    />
+  </head>
+  <body>
+    <main class="desktop-4">
+      <div class="frame-div" id="hero">
+        <div class="frame-div1">
+          <div class="frame-div2" id="header">
+            <h1 class="hi-im-sluleko-biyela-a-uiu" data-animate-on-scroll>
+              <span>Hi, I’m S’luleko Biyela a UI/UX </span
+              ><span class="designer-span">Designer</span
+              ><span> and Front-end </span
+              ><span class="developer-span">Developer</span><span>.</span>
+            </h1>
+          </div>
+          <div class="frame-div3" id="info">
+            <h4 class="im-passionate-on-collaboratin" data-animate-on-scroll>
+              I’m passionate on collaborating with teams to see ideas come to
+              life, ensuring that users have an amazing and fulfilling
+              experience interacting with Applications and Websites.
+            </h4>
+          </div>
+          <div class="frame-div4">
+            <button class="btn-button" autofocus id="btnButton">
+              <img class="group-icon" alt="" src="public/group.svg" />
+              <h3 class="request-my-portfolio">Request My Portfolio</h3>
+            </button>
+          </div>
+          <div class="frame-div5" id="socials">
+            <div class="icons-div" id="contacts" data-animate-on-scroll>
+              <a class="group-a" href="https://wa.link/i91os1"
+                ><img class="vector-icon" alt="" src="public/vector.svg" /></a
+              ><a
+                class="group-a1"
+                href="https://dribbble.com/sluleko?"
+                target="_blank"
+                ><img class="vector-icon1" alt="" src="public/vector1.svg" /></a
+              ><a
+                class="group-a2"
+                href="https://dribbble.com/sluleko?"
+                target="_blank"
+                ><img class="vector-icon2" alt="" src="public/vector2.svg"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <img class="rectangle-icon" alt="" src="public/rectangle-18@2x.png" />
+      </div>
+      <img class="rectangle-icon1" alt="" src="public/rectangle@2x.png" />
+    </main>
+
+    <script>
+                      const btnButton = document.getElementById("btnButton");
+                      if(btnButton) {
+                        btnButton.addEventListener("click", function () {
+                          window.location.href = "mailto:Sluleko@bluedeed.co.za?subject=Send Me Your Portfolio";
+                        });
+                      }
+      const scrollAnimElements = document.querySelectorAll('[data-animate-on-scroll]');
+        const observer = new IntersectionObserver((entries) => {
+          for(const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        }, {
+          threshold: 0.15,
+        });
+
+        for (let i = 0; i < scrollAnimElements.length; i++) {
+          observer.observe(scrollAnimElements[i]);
+        }
+    </script>
+  </body>
+</html>
