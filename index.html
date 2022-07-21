@@ -58,16 +58,16 @@
         </div>
         <img class="rectangle-icon" alt="" src="public/rectangle-18@2x.png" />
       </div>
-      <img class="rectangle-icon1" alt="" src="public/rectangle@2x.png" />
+      <img class="rectangle-icon1" alt="" src="public/rectangle@2x.png" class="z-index: -1;" />
     </main>
 
     <script>
-                      const btnButton = document.getElementById("btnButton");
-                      if(btnButton) {
-                        btnButton.addEventListener("click", function () {
-                          window.location.href = "mailto:Sluleko@bluedeed.co.za?subject=Send Me Your Portfolio";
-                        });
-                      }
+      const btnButton = document.getElementById("btnButton");
+      if(btnButton) {
+        btnButton.addEventListener("click", function () {
+          window.location.href = "mailto:Sluleko@bluedeed.co.za?subject=Send Me Your Portfolio";
+        });
+      }
       const scrollAnimElements = document.querySelectorAll('[data-animate-on-scroll]');
         const observer = new IntersectionObserver((entries) => {
           for(const entry of entries) {
