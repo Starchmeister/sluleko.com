@@ -1,89 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <title></title>
-    <meta name="description" content="" />
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./index.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
-    />
-  </head>
-  <body>
-    <main class="desktop-4">
-      <div class="frame-div" id="hero">
-        <div class="frame-div1">
-          <div class="frame-div2" id="header">
-            <h1 class="hi-im-sluleko-biyela-a-uiu" data-animate-on-scroll>
-              <span>Hi, I’m S’luleko Biyela a UI/UX </span
-              ><span class="designer-span">Designer</span
-              ><span> and Front-end </span
-              ><span class="developer-span">Developer</span><span>.</span>
-            </h1>
-          </div>
-          <div class="frame-div3" id="info">
-            <h4 class="im-passionate-on-collaboratin" data-animate-on-scroll>
-              I’m passionate on collaborating with teams to see ideas come to
-              life, ensuring that users have an amazing and fulfilling
-              experience interacting with Applications and Websites.
-            </h4>
-          </div>
-          <div class="frame-div4">
-            <button class="btn-button" autofocus id="btnButton" style="z-index: 100;">
-              <img class="group-icon" alt="" src="public/group.svg" />
-              <h3 class="request-my-portfolio">Request My Portfolio</h3>
-            </button>
-          </div>
-          <div class="frame-div5" id="socials">
-            <div class="icons-div" id="contacts" data-animate-on-scroll>
-              <a class="group-a" href="https://wa.link/i91os1"
-                ><img class="vector-icon" alt="" src="public/vector.svg" /></a
-              ><a
-                class="group-a1"
-                href="https://dribbble.com/sluleko?"
-                target="_blank"
-                ><img class="vector-icon1" alt="" src="public/vector1.svg" /></a
-              ><a
-                class="group-a2"
-                href="https://dribbble.com/sluleko?"
-                target="_blank"
-                ><img class="vector-icon2" alt="" src="public/vector2.svg"
-              /></a>
-            </div>
-          </div>
-        </div>
-        <img class="rectangle-icon" alt="" src="public/rectangle-18@2x.png" />
+
+</head>
+<body>
+  <div class="nav">
+      <div class="logo">
+        <h3>SNB</h3>
       </div>
-      <img class="rectangle-icon1" alt="" src="public/rectangle@2x.png" style="z-index: -1;" />
-    </main>
+  </div>
+  <div class="main">
+    <div class="rectangle"></div>
+    <div class="location-icons"></div>
+    <div class="intro"> 
+      <h1>HI,IM SLULEKO A <br> UI/UX ENGINEER</h1>
+      <p>I create inclusive, accessible digital products, with experience working with <br>
+        startups and enterprise products. I believe in using product design as a tool to <br> 
+        elevate human interaction with technology that scale.
+      </p>
+    </div>
+    <div class="Arrow-button">
+      <img src="public/Arrow 1.svg" alt="arrow">
+      <button>Request Portfolio & CV</button>
+    </div>
+  </div>
 
-    <script>
-      const btnButton = document.getElementById("btnButton");
-      if(btnButton) {
-        btnButton.addEventListener("click", function () {
-          window.location.href = "mailto:Sluleko@bluedeed.co.za?subject=Send Me Your Portfolio";
-        });
-      }
-      const scrollAnimElements = document.querySelectorAll('[data-animate-on-scroll]');
-        const observer = new IntersectionObserver((entries) => {
-          for(const entry of entries) {
-            if (entry.isIntersecting || entry.intersectionRatio > 0) {
-              const targetElement = entry.target;
-              targetElement.classList.add("animate");
-              observer.unobserve(targetElement);
-            }
-          }
-        }, {
-          threshold: 0.15,
-        });
-
-        for (let i = 0; i < scrollAnimElements.length; i++) {
-          observer.observe(scrollAnimElements[i]);
-        }
-    </script>
-  </body>
+  <div class="socials">
+      <img src="public/LinkedIn.svg" alt="linkedin">
+      <img src="public/Dribbble.svg" alt="dribble">
+      <img src="public/Instagram.svg" alt="instagram">
+  </div>
+    
+</body>
 </html>
